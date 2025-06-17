@@ -1,0 +1,366 @@
+/* Estilo general */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #048168;
+}
+
+/* Capa de fondo verde claro (más ancha) */
+.background-layer {
+  width: 400px;
+  background-color: #85a942; /* Verde claro */
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.1);
+  margin: 0 auto; /* Centra la capa */
+  padding: 20px; /* Añade padding para dar espacio entre las capas */
+  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño */
+}
+
+/* Capa superior verde oscuro con imagen centrada */
+.top-layer {
+  background-color: #467c04; /* Verde oscuro */
+  padding: 20px 0;
+  text-align: center;
+  border-radius: 50px 50px 0 0;
+  
+}
+
+.top-layer img {
+  max-width: 70%;
+  height: auto;
+  border-radius: 5px;
+  border-radius: 50px 50px 0 0;
+}
+
+/* Línea divisoria */
+.divider {
+  margin: 5px 0;
+}
+
+/* Capa de texto centrado con fondo verde oscuro */
+.text-layer {
+  background-color: #467c04; /* Verde más oscuro */
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+.text-layer p {
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+/* Capa de texto adicional con verde oscuro */
+.additional-text-layer {
+  background-color: #467c04; /* Verde oscuro */
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+.additional-text-layer p {
+  font-size: 16px;
+    border-radius: 50px 50px 0 0;  
+}
+
+.imagen-verde {
+  width: 300px;
+  height: auto300;
+  filter: sepia(5) saturate(0) hue-rotate(120deg); /* Tono verdoso */
+  transition: all 0.3s ease;
+  border-radius: 50px 50px 0 0; /* Suaviza el cambio */
+}
+
+/* Al pasar el ratón */
+.imagen-verde:hover {
+  filter: none; /* Imagen original */
+  transform: scale(1.05); /* Un poco más grande */
+}
+
+.nombre-decorado {
+  text-transform: uppercase;         /* MAYÚSCULAS */
+  letter-spacing: 2px;              /* Espaciado entre letras */
+  text-align: center;               /* Centrado */
+  color: white;                     /* color nombre */
+  margin-top: 20px;                 
+  position: relative;               /* Necesario para la línea decorativa que va por encima del nombre */
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.nombre-decorado:hover {
+  filter: none; /* Imagen original */
+  transform: scale(1.05); /* Un poco más grande */
+}
+
+/* Línea decorativa por encima del nombre */
+.nombre-decorado::before {
+  content: "";
+  position: absolute;
+  top: -10px;                       /* Distancia de la línea al texto */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;                       /* Ajusta según quieras */
+  height: 2px;
+  background-color: white;         /* Color de la línea */
+}
+
+table.tabla-sin-bordes {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 290px;
+  margin: 0 auto;
+  
+}
+
+.tabla-sin-bordes td {
+  padding: 3px;
+  text-align: center;
+  border: none; /* Quitar bordes */
+  background-color: #85a942;
+  font-size: 12px;
+  color:black
+  
+  
+}
+
+ .tabla-sin-bordes td:hover {
+   filter: none; /* Imagen original */
+   font-size: 12px;
+   color: white  
+}
+
+ td:hover {
+      background-color: #467c04; /* Puedes cambiar este color */
+      cursor: pointer;
+    }
+
+/* Para centrar todas las tarjetas horizontalmente */
+main {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;     /* Centra verticalmente */
+    flex-wrap: wrap;         /* Permite que las tarjetas bajen a la siguiente fila si no caben en una misma fila */
+    gap: 20px;               /* Espacio entre tarjetas */
+    min-height: 100vh;       /* Ocupar toda la altura de la pantalla */
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+/* Para cambiar tamaño de las tarjetas */
+.container {
+    width: 400px;
+    background-color: #048168;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+audio {
+-webkit-transition:all 0.5s linear;
+-moz-transition:all 0.5s linear;
+-o-transition:all 0.5s linear;
+transition:all 0.5s linear;
+-moz-box-shadow: 2px 2px 4px 0px #CEB37E;
+-webkit-box-shadow:  2px 2px 4px 0px #CEB37E;
+box-shadow: 2px 2px 4px 0px #CEB37E;
+-moz-border-radius:7px 7px 7px 7px ;
+-webkit-border-radius:7px 7px 7px 7px ;
+border-radius:7px 7px 7px 7px ;
+background-color: #CEB37E;
+border-radius: 50px;
+}
+
+audio::-webkit-media-controls-play-button,
+     audio::-webkit-media-controls-panel {
+     background-color: #467c04;
+     color: #000;
+     width: 30px;
+     }
+
+/* Estilos del menú de navegación */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #85a942;
+  padding: 15px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list li a {
+  color: #85a942;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: sans-serif;
+  transition: color 0.3s;
+}
+
+.nav-list li a:hover {
+  color: #85a942;
+}
+
+/* Para que el contenido no quede debajo del menú */
+main {
+  margin-top: 80px; /* ajusta según el alto del navbar */
+}
+/* Navbar creativa y responsive */
+.navbar {
+  position: fixed;
+  width: 100%;
+  background: linear-gradient(90deg, #048168, #85a942);
+  color: white;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Georgia', serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #85a942;
+}
+.logo:hover {
+  text-shadow:
+    1px 0 white,
+    -1px 0 white,
+    0 1px white,
+    0 -1px white;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-list li a {
+  color: #024d3e;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-list li a:hover {
+  color: #f2c94c;
+  text-shadow:
+    1px 0 white,
+    -1px 0 white,
+    0 1px white,
+    0 -1px white;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    background-color: #85a942;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .nav-list.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* Para que el contenido no quede oculto detrás del header */
+main {
+  margin-top: 80px;
+  padding: 20px;
+}
+
+.carrusel-container {
+  width: 90%;
+  max-width: 450px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.carrusel {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+}
+
+.tarjeta {
+  flex: 0 0 80%;
+  border-radius: 15px;
+  padding: 10px;
+  scroll-snap-align: start;
+  box-shadow: 0 0 15px rgba(3, 110, 96, 0.4);
+  min-height: 200px;
+}
+
+/* Estilo de la barra scroll */
+::-webkit-scrollbar {
+  width: 10px; /* ancho del scroll vertical */
+  height: 10px; /* alto del scroll horizontal (si aplica) */
+}
+
+/* Color de fondo del área del scroll */
+::-webkit-scrollbar-track {
+  background: #024d3e;
+}
+
+/* Color del "thumb" (la parte que se mueve) */
+::-webkit-scrollbar-thumb {
+  background: #85a942;
+  border-radius: 5px;
+}
+
+.titulo-carrusel {
+  background: linear-gradient(90deg, #048168, #85a942);
+}
+
+.titulo-carrusel h2 {
+  color: #024d3e;
+  font-size: 2rem;
+  font-weight: bold;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ficha de gustos</title>
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="logo">BOOTCAMP</div>
+      <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+      <ul class="nav-list" id="nav-list">
+        <li><a href="#" data-page="inicio">Inicio</a></li>
+        <li><a href="#" data-page="galeria">Galería</a></li>
+        <li><a href="#" data-page="contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+
+<main id="main-content">
+  
+  <article>
+    <div class="container">
+             <!-- Capa de fondo, oscuro -->
+        <div class="background-layer">
+              <!-- Capa superior, pricipal -->
+           <section>
+            <div class="top-layer">
+            </div>
+           </section>  
+                    <!-- Línea divisoria delgada -->
+                    <div class="divider"></div>
+                    <!--nombre -->
+            <section>
+                 <div class="text-layer">
+                 <div class="nombre-decorado">BOOTCAMP - Súper-Kode <div>                   
+                </div>
+            </section>
+                    <!-- Línea divisoria delgada -->
+                    <div class="divider"></div>          
+                    <!-- Línea divisoria delgada -->
+                    <div class="divider"></div>
+                    <!-- info -->
+            <section>
+                    <div class="additional-text-layer">
+                    <table class="tabla-sin-bordes">
+                      <tr>
+                        <td>Ésta es una web responsive, con menú desplegable si lo ves en el teléfono móvil, o menú completo desde un monitor.
+                        </td>
+                      </tr>
+                    </table>
+            </section>                
+         </div>
+    </div>
+    </article>
+</main>
+
+<!-- Script de JavaScript para que el contenido esté en el <main> -->
+<script>
+  const links = document.querySelectorAll(".nav-list a");
+  const main = document.getElementById("main-content");
+
+  links.forEach(link => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const page = link.getAttribute("data-page");
+      fetch(`${page}.html`)
+        .then(res => res.text())
+        .then(html => {
+          main.innerHTML = html;
+        });
+    });
+  });
+
+  // Menú hamburguesa
+  const toggle = document.getElementById("menu-toggle");
+  const navList = document.getElementById("nav-list");
+
+  toggle.addEventListener("click", () => {
+    navList.classList.toggle("show");
+  });
+</script>
+
+</body>
+</html>
