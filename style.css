@@ -160,6 +160,7 @@ main {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom:5px;
 }
 
 audio {
@@ -241,6 +242,10 @@ main {
   align-items: center;
 }
 
+.logo-container {
+  display: flex;
+  flex-direction: column;
+}
 .logo {
   font-family: 'Georgia', serif;
   font-size: 24px;
@@ -249,10 +254,25 @@ main {
 }
 .logo:hover {
   text-shadow:
-    1px 0 white,
+    1px 0 black,
     -1px 0 white,
     0 1px white,
     0 -1px white;
+}
+
+.sublogo {
+  font-family: Georgia, serif;
+  font-size: 12px;
+  font-weight: lighter;
+  color:#85a942;
+}
+
+.sublogo:hover {
+  text-shadow:
+    1px 0 #467c04,
+    -1px 0 #467c04,
+    0 1px #024d3e,
+    0 -1px #467c04;
 }
 
 .nav-list {
@@ -286,7 +306,7 @@ main {
   cursor: pointer;
 }
 
-/* Responsive styles */
+/* Responsive Estilos */
 @media (max-width: 768px) {
   .nav-list {
     display: none;
@@ -321,9 +341,11 @@ main {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
+  margin-top: 5px;
 }
 
 .carrusel {
+  margin-top:5px;
   display: flex;
   gap: 20px;
   padding: 10px;
@@ -363,4 +385,30 @@ main {
   color: #024d3e;
   font-size: 2rem;
   font-weight: bold;
+}
+
+.titulo-index {
+  background: linear-gradient(90deg, #048168, #85a942);
+}
+
+.titulo-index h2 {
+  background: linear-gradient(90deg, #048168, #85a942);
+  font-size: 12px;
+}
+
+.h2-index{
+text-align:center;
+}
+
+button {
+background-color: #467c04; /* Azul */
+color: white;
+border: none;
+padding: 10px 20px;
+cursor: pointer;
+border-radius: 5px;
+}
+
+button:hover {
+background-color: #85a942; /* Azul más oscuro al pasar el mouse */
 }
