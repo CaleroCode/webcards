@@ -26,10 +26,12 @@
                 transition: color 0.3s;
                 }
 
-                &:hover {
-                color: #85a942;
-                }
+               
 }
+.nav-list li a:hover {
+        color: #85a942;
+}
+
 
 
 
@@ -129,28 +131,48 @@ main {
         cursor: pointer;
 }
 
-/* Responsive Estilos */
+/* menu responsive con animacion */
 @media (max-width: 768px) {
-.nav-list {
-        display: none;
-        flex-direction: column;
-        background-color: #85a942;
-        border: 2px solid #8E9C45;
-        position: absolute;
-        top: 60px;
-        right: 30px;
-        width: 120px;
-        height: 120px;
-        padding: 10px;
-        border-radius: 0 0 100px 20px;  
-}
+  .nav-list {
+    display: flex;
+    flex-direction: column;
+    background-color: #85a942;
+    border: 3px solid rgb(202, 227, 146); /* Borde blanco de 5px */
+    position: absolute;
+    top: 60px;
+    right: 30px;
+    width: 80px;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: max-height 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
+    border-radius: 0 0 20px 20px;
+    padding: 0 10px; /* evita salto al abrir */
+    pointer-events: none; /* evita clics cuando está oculto */
+    justify-content: center; /* Centra los elementos en el contenedor */
+  }
 
-.nav-list.show {
-        display: flex;
-        border: 2px solid #c3d372;
-}
+  .nav-list.show {
+    max-height: 500px; /* Lo suficiente para mostrar todos los items */
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
 
-.menu-toggle {
-        display: block;
-}
+  .nav-list li {
+    width: 100%; /* Los items ocupan el 100% del contenedor */
+    display: flex;
+    justify-content: center; /* Centra los enlaces horizontalmente */
+  }
+
+  .nav-list li a {
+    text-align: center; /* Asegura que el texto dentro del enlace esté centrado */
+    width: 100%; /* Hace que el enlace ocupe todo el espacio del item */
+    padding: 10px 0; /* Añade espacio alrededor del texto */
+  }
+
+  .menu-toggle {
+    display: block;
+  }
 }

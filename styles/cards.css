@@ -81,15 +81,15 @@
 
 .imagen-verde {
     width: 300px;
-    height: auto300;
+    height: auto;
     filter: sepia(1) saturate(0); /* tono verdoso */
     transition: all 0.3s ease;
     border-radius: 50px 50px 0 0; /* pa radio arriba izq-der */
-    
-        &:hover {
-        filter: none; /* imagen original */
-        transform: scale(1.05); /* un poco más grande */
-        }
+}
+.imagen-verde:hover {
+    filter: none; /* imagen original */
+    transform: scale(1.20) rotate(5deg); /* imagen un poco más grande y rota */
+    animation: vaiven 1s ease-in-out infinite; /* animación de vaivén */
 }
 
 audio {
