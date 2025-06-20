@@ -115,6 +115,7 @@ main {
 .titulo-carrusel {
     margin-bottom: 0.5rem;
     background: linear-gradient(90deg, #9cac45, #85a942);
+
         h2 {
         font-size: 2rem;
         font-weight: bold;
@@ -123,6 +124,7 @@ main {
 
 .titulo-index {
     background: linear-gradient(90deg, #9cac45, #85a942);
+    
         h2 {
         background: linear-gradient(90deg, #9cac45, #85a942);
         font-size: 18px;

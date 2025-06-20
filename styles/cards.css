@@ -9,12 +9,15 @@
     padding: 20px; /* Añade padding para dar espacio entre las capas */
     box-sizing: border-box; /* Asegura que el padding no afecte el tamaño */
 }
+
 /* Capa superior verde oscuro con imagen centrada */
+
 .top-layer {
     background-color: #758039; /* Verde oscuro */
     padding: 20px 0;
     text-align: center;
     border-radius: 50px 50px 0 0;
+
         img {
         max-width: 70%;
         height: 300px;
@@ -26,12 +29,14 @@
 .divider {
     margin: 5px 0;
 }
+
 /* Capa de texto centrado con fondo verde oscuro */
 .text-layer {
     background-color: #758039; /* Verde más oscuro */
     padding: 10px;
     text-align: center;
     color: white;
+
         p {
         text-transform: uppercase;
         font-size: 18px;
@@ -67,6 +72,7 @@
     padding: 20px;
     color: white;
     text-align: center;
+
         p {
         font-size: 16px;
         border-radius: 50px 50px 0 0;  
@@ -79,10 +85,11 @@
     filter: sepia(1) saturate(0); /* tono verdoso */
     transition: all 0.3s ease;
     border-radius: 50px 50px 0 0; /* pa radio arriba izq-der */
-}
-.imagen-verde:hover {
-    filter: none; /* imagen original */
-    transform: scale(1.05); /* un poco más grande */
+    
+        &:hover {
+        filter: none; /* imagen original */
+        transform: scale(1.05); /* un poco más grande */
+        }
 }
 
 audio {
